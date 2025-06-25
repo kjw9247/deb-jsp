@@ -6,3 +6,6 @@ spring:
   output:
     ansi:
       enabled: always
+logging:
+  pattern:
+    console: "${LOGPATTERN_CONSOLE:%green(%d{HH:mm:ss.SSS}) %blue(%-5level) %red([%thread]) %yellow(%logger{15}:%line)-%msg%n}"

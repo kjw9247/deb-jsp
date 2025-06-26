@@ -13,6 +13,15 @@ import jakarta.servlet.http.HttpServletResponse;
 
 
 public interface Controller {
+  // 사용자 정의 메서드에 파라미터 자리에 요청객체와 응답객체를
+  // 톰캣 서버로 부터 어떻게 주입을 받아올 것인가? - 싱글톤
   public String excute(HttpServletRequest req, HttpServletResponse res)
   throws Exception; 
 }
+
+// 용어정리
+// IoC(제어역전, 역제어), DI(의존성 주입), POJO
+// 추상클래스, 인터페이스
+// 인스턴스화, 생성자, 파라미터, 리턴타입
+// RestAPI
+// sendRedirect, forward

@@ -13,16 +13,22 @@ public class ControllerMapping {
    * 예) dept/crudDept, emp/crudEmp, board/crudBoard
    * @return
    ***********************************************/
+  // 업무이름 - 폴더이름, 메서드이름 
   public static Controller getController(String command){
     Controller controller = null;
     String [] commands = command.split("/");
+    // 업무이름에 따라서 XXXController가 결정된다
     String workname = commands[0]; // 업무이름 - 폴더이름
     String methodName = commands[1]; // 메서드이름
     if ("member".equals(workname)) {
-      controller = new MemberController();
+      controller = new MemberController(methodName);
 
     }else if ("board".equals(workname)) {
-      controller = new BoardController();
+      controller = new BoardController(methodName);
+
+    }else if ("common".equals(workname)) {
+      controller = new CommonController(methodName);
+
     }
     return controller;
   }

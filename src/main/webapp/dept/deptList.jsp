@@ -5,7 +5,7 @@
     <title>부서목록</title>
 </head>
 <body>
-    <h1>부서목록 페이지</h1>
+    <h1>부서 목록 페이지</h1>
     <p>This is a reusable JSP template.</p>
 </body>
 </html>

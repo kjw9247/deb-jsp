@@ -1,21 +1,18 @@
 package com.example.demo.vo;
-
-// VO패턴은 제네릭, 객체베열, Map
+// VO패턴은 제네릭, 객체배열, Map
 // 캡슐화 - private
 // DataSet은 테이블 구조를 가짐 - UI/UX 바인딩
-
 public class ZipCodeVO {
-  
-  private int uid_no = 0;
-  private int zipcode = 0;                          
-  private String zdo     = null;       
-  private String sigu    = null;  
-  private String dong    = null;  
-  private String ri      = null; 
-  private String bungi   = null;  
-  private String aptname = null;  
-  private String upd_date= null;  
-  private String address = null;
+  private int    uid_no  =    0;
+  private int    zipcode =    0;//                  
+  private String zdo     = null;//                  
+  private String sigu    = null;//                  
+  private String dong    = null;//
+  private String ri      = null;//
+  private String bungi   = null;//
+  private String aptname = null;//
+  private String upd_date= null;//
+  private String address = null;//  
   public int getUid_no() {
     return uid_no;
   }
@@ -75,6 +72,5 @@ public class ZipCodeVO {
   }
   public void setAddress(String address) {
     this.address = address;
-  } 
-  
+  }
 }

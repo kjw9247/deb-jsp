@@ -23,9 +23,9 @@
 <%
   //스크립틀릿
   for(int i=0;i<size;i++){
-    Map<String,<Object> map = list.get(i);
+    Map<String,Object> map =list.get(i);
 %>
-      <li><%=map.get("ename")%> : <%=map.get("job")%></li>
+      <li><%=map.get("ename") %> : <%=map.get("job") %></li>
 <%
   }//end of for
 %>

@@ -21,11 +21,11 @@ public class ZipCodeDao {
   public ZipCodeDao() {
     dbMgr = DBConnectionMgr.getInstance();
   }
-  public List<Map<String, Object>> zipcodeList(String dong){
-    List<Map<String, Object>> zlist = new ArrayList<>();
+  public List<Map<String,Object>> zipcodeList(String dong){
+    List<Map<String,Object>> zlist = new ArrayList<>();
     StringBuilder sql = new StringBuilder();
     sql.append("SELECT zipcode, address");
-    sql.append("FROM zipcode_t");
+    sql.append("  FROM zipcode_t ");
     sql.append("WHERE dong LIKE '"+dong+"'||'%'");
     try {
       conn = dbMgr.getConnection();
@@ -35,8 +35,8 @@ public class ZipCodeDao {
       while (rs.next()) {
         log.info("while");
         rmap = new HashMap<>();
-        rmap.put("zipcode", rs.getInt("empno"));
-        rmap.put("ename", rs.getString("ename"));
+        rmap.put("zipcode", rs.getInt("zipcode"));
+        rmap.put("address", rs.getString("address"));
         zlist.add(rmap);
       }
       log.info(zlist);

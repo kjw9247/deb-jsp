@@ -1,10 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ page import="java.util.Map" %>
 <%
-    Map<String, Object> map = (Map)request.getAttribute("map");
-    out.print(map); // null
+    Map<String,Object> map = (Map)request.getAttribute("map");
+    out.print(map);//null
 %>
-
 <!DOCTYPE html>
 <html>
 <head>

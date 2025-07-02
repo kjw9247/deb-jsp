@@ -53,6 +53,6 @@ public class EmpDao {
   // insert here -> main
   public static void main(String[] args) {
     EmpDao mDao = new EmpDao();
-    // mDao.empList(20);
+    //mDao.empList();
   }
 }
